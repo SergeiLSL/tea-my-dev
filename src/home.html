@@ -7,6 +7,95 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+
+				<section class="blog">
+					<div class="blog__container">
+						<div class="blog__title title">
+							Our Tea Blog
+						</div>
+						<!--! формирование базы данных blog__items time 1:29:30 -->
+						<div class="blog__items">
+							<!--? база формируется находится в файле src/files/blog.json -->
+							<!--? база находится в файле ??? -->
+							<article class="blog__item item-blog">
+								<div class="item-blog__card">
+									<a href="#!" class="item-blog__image-ibg">
+										<img src="@img/blog/01.jpg" alt="Image">
+									</a>
+									<div class="item-blog__content">
+										<h4 class="item-blog__title">
+											<a href="#!" class="item-blog__link-title">Tea Time Travels: Funny Moments from Around the World</a>
+										</h4>
+										<div class="item-blog__text">
+											<p>
+												by Robinson Crusoe
+											</p>
+										</div>
+										<a href="#" class="item-blog__read">Read</a>
+									</div>
+								</div>
+
+							</article>
+							<article class="blog__item item-blog">
+								<div class="item-blog__card">
+									<a href="#!" class="item-blog__image-ibg">
+										<img src="@img/blog/02.jpg" alt="Image">
+									</a>
+									<div class="item-blog__content">
+										<h4 class="item-blog__title">
+											<a href="#!" class="item-blog__link-title">The Role of Tea in Mental Health</a>
+										</h4>
+										<div class="item-blog__text">
+											<p>
+												by Joker
+											</p>
+										</div>
+										<a href="#" class="item-blog__read">Read</a>
+									</div>
+								</div>
+							</article>
+							<article class="blog__item item-blog">
+								<div class="item-blog__card">
+									<a href="#!" class="item-blog__image-ibg">
+										<img src="@img/blog/03.jpg" alt="Image">
+									</a>
+									<div class="item-blog__content">
+										<h4 class="item-blog__title">
+											<a href="#!" class="item-blog__link-title">Tea-rific Tales: Hilarious Stories from Tea Lovers</a>
+										</h4>
+										<div class="item-blog__text">
+											<p>
+												by Casper the Friendly Ghost
+											</p>
+										</div>
+										<a href="#" class="item-blog__read">Read</a>
+									</div>
+								</div>
+
+							</article>
+							<article class="blog__item item-blog">
+								<div class="item-blog__card">
+									<a href="#!" class="item-blog__image-ibg">
+										<img src="@img/blog/04.jpg" alt="Image">
+									</a>
+									<div class="item-blog__content">
+										<h4 class="item-blog__title">
+											<a href="#!" class="item-blog__link-title">Tea and Caffeine: Effects on the Brain and Behavior</a>
+										</h4>
+										<div class="item-blog__text">
+											<p>
+												by Author Authorius
+											</p>
+										</div>
+										<a href="#" class="item-blog__read">Read</a>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="buttton blog__view-more" type="button">View More</div>
+					</div>
+				</section>
+
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

@@ -1,5 +1,5 @@
 // Заголовки, загальні БЕМ блоки та інше...
-.tille {
+.title {
 	font-family: Cormorant;
 	@include adaptiveValue("font-size", 40, 24);
 }
