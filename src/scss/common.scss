@@ -1,0 +1,24 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.tille {
+	font-family: Cormorant;
+	@include adaptiveValue("font-size", 40, 24);
+}
+
+.blockquote {
+	// .blockquote__text
+	&__text {
+		font-size: toRem(16);
+		font-style: italic;
+		font-weight: 300;
+	}
+	// .blockquote__author
+	&__client {
+		font-size: toRem(20);
+		font-weight: 600;
+	}	
+	// .blockquote__author
+	&__author {
+		font-size: toRem(12);
+		font-weight: 300;
+	}
+}
