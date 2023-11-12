@@ -5,11 +5,14 @@
 }
 
 .blockquote {
+	margin-bottom: toRem(40);
 	// .blockquote__text
 	&__text {
 		font-size: toRem(16);
 		font-style: italic;
 		font-weight: 300;
+		margin-bottom: toRem(10);
+		line-height: 137.5%; /* 22/16 */
 	}
 	// .blockquote__author
 	&__client {
