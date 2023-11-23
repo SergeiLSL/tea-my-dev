@@ -12,9 +12,12 @@ textarea {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
+	padding-left: 20px;
+	@include adaptiveValue("padding-left", 20, 10);
 	border: 1px solid #eee;
 	&._form-focus {
+		color: $brownColor;
+		border: 1px solid #eee;
 	}
 	&._form-error {
 	}
@@ -25,6 +28,7 @@ textarea {
 	}
 	&:focus::placeholder {
 		opacity: 0;
+		border: 1px solid #eee;		
 	}
 }
 

@@ -1,7 +1,12 @@
 // Заголовки, загальні БЕМ блоки та інше...
 .title {
 	font-family: Cormorant;
-	@include adaptiveValue("font-size", 40, 24);
+	@include adaptiveValue("font-size", 40, 32);
+	@include adaptiveValue("margin-bottom", 60, 30);
+	// .title--center
+	&--center {
+		text-align: center;
+	}
 }
 
 .blockquote {
@@ -18,10 +23,79 @@
 	&__client {
 		font-size: toRem(20);
 		font-weight: 600;
-	}	
+	}
 	// .blockquote__author
 	&__author {
 		font-size: toRem(12);
 		font-weight: 300;
 	}
 }
+//===============================================================================
+.button {
+	position: relative;
+	display: inline-flex;
+	justify-self: center;
+	color: $mainColor;
+	font-size: toRem(20);
+	font-weight: 300;
+	border: 1px solid $mainColor;
+	background-color: #fff;
+	padding: toRem(12) toRem(41);
+	transition: background-color 0.3s;
+	@media (any-hover: hover) {
+		transition: all 0.3s;
+		&:hover {
+			background-color: $hoverColor;
+			font-weight: 500;
+		}
+	}
+}
+
+//===============================================================================
+// .checkbox {
+// 	// .checkbox__input
+// 	&__input {
+// 		display: none;
+// 		&:checked + .checkbox__label::after {
+// 			transform: scale(1);
+// 		}
+// 	}
+// 	// .checkbox__label
+// 	&__label {
+// 		font-size: toRem(13);
+// 		line-height: 140%;
+// 		font-weight: 300;
+// 		display: inline-flex;
+// 		align-items: center;
+// 		position: relative;
+// 		cursor: pointer;
+// 		&:before {
+// 			content: "";
+// 			align-self: flex-start;
+// 			flex: 0 0 toRem(14);
+// 			height: toRem(14);
+// 			background-color: #fff;
+// 			// border-radius: toRem(4);
+// 			border: toRem(1) solid $brownColor;
+// 			margin: toRem(0) toRem(10) toRem(0) toRem(0);
+// 		}
+// 		&::after {
+// 			transition: transform 0.5s ease 0s;
+// 			content: "";
+// 			width: toRem(8);
+// 			height: toRem(8);
+// 			position: absolute;
+// 			top: toRem(3);
+// 			left: toRem(3);
+// 			background-color: $brownColor;
+// 			// border-radius: toRem(2);
+// 			transform: scale(0);
+// 		}
+// 		& a {
+// 			color: $brownColor;
+// 		}
+// 	}
+// 	&._error .checkbox__label::before {
+// 		box-shadow: 0 0 15px red;
+// 	}
+// }

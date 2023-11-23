@@ -8,7 +8,7 @@
 			@@include('html/_header.htm',{})
 			<main class="page">
 
-				<section class="blog">
+				<section class="page-blog blog">
 					<div class="blog__container">
 						<div class="blog__title title">
 							Our Tea Blog
@@ -34,7 +34,6 @@
 										<a href="#" class="item-blog__read">Read</a>
 									</div>
 								</div>
-
 							</article>
 							<article class="blog__item item-blog">
 								<div class="item-blog__card">
@@ -92,9 +91,87 @@
 								</div>
 							</article>
 						</div>
-						<div class="buttton blog__view-more" type="button">View More</div>
+						<div class="buttton blog__view-more button" type="button">View More</div>
 					</div>
 				</section>
+
+				<section class="page__subscribe subscribe">
+					<div class="subscribe__container">
+						<div class="subscribe__title title">
+							Want to know more?
+						</div>
+						<div class="subscribe__row">
+							<div class="subscribe__column">
+								<div class="subscribe__content">
+									<div class="subscribe__text">
+										<p>
+											Join our mailing list and stay up-to-date with the latest news, promotions, and exclusive offers from our tea store. Be the first to know about new tea arrivals, seasonal blends, and special discounts. Don't miss out on the tea-rrific perks - sign up today!
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="subscribe__column">
+								<div class="subscribe__body">
+									<form action="#" class="subscribe__form form">
+										<div class="form__body-input">
+											<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="name@email.com" class="form__input input">
+											<button type="submit" class="form__button button">Join</button>
+										</div>
+
+										<div class="form__checkbox checkbox">
+											<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+											<label for="formAgreement" class="checkbox__label">
+												We take your privacy seriously and are committed to protecting your personal information. By subscribing to our mailing list, you are consenting to receive periodic emails from us about our products, promotions, and other tea-related information.
+											</label>
+										</div>
+
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="page__prioritise prioritise">
+					<div class="prioritise__container">
+						<h2 class="prioritise__title title title--center">We Prioritise</h2>
+						<div class="prioritise__items">
+
+							<div class="prioritise__item">
+								<div class="prioritise__card card">
+									<div class="card__title">Single garden teas</div>
+									<div class="card__text">Complete transparency</div>
+									<div class="card__icon"><img src="@img/prioritise/01.svg" alt="Icon"></div>
+								</div>
+							</div>
+
+							<div class="prioritise__item">
+								<div class="prioritise__card card">
+									<div class="card__title">Only Loose leaf tea</div>
+									<div class="card__text">Best Drinking Experience</div>
+									<div class="card__icon"><img src="@img/prioritise/02.svg" alt="Icon"></div>
+								</div>
+							</div>
+
+							<div class="prioritise__item">
+								<div class="prioritise__card card">
+									<div class="card__title">Customer support</div>
+									<div class="card__text">No bots, no automated replies</div>
+									<div class="card__icon"><img src="@img/prioritise/03.svg" alt="Icon"></div>
+								</div>
+							</div>
+
+							<div class="prioritise__item">
+								<div class="prioritise__card card">
+									<div class="card__title">Fast shipping</div>
+									<div class="card__text">Save, Convenient, Reliable</div>
+									<div class="card__icon"><img src="@img/prioritise/04.svg" alt="Icon"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
 
 			</main>
 			@@include('html/_footer.htm',{})
