@@ -1,6 +1,12 @@
 //==================================================================================
 //==================================================================================
 .page {
+	// .page__quote
+	&__quote {
+	}
+	// .page__collections
+	&__collections {
+	}
 	// .page__clients
 	&__clients {
 	}
@@ -14,6 +20,97 @@
 	&__prioritise {
 	}
 }
+
+//===============================================================================
+//===============================================================================
+.quote {
+	@include adaptiveValue("padding-top", 150, 30);
+	@include adaptiveValue("padding-bottom", 75, 30);
+	// .quote__container
+	&__container {
+	}
+	// .quote__quote
+	&__quote-text {
+		display: flex;
+		text-align: center;
+		margin: 0 auto;
+		@include adaptiveValue("max-width", 704, 376, 0, 1600, 479.98);
+		font-family: "Cormorant";
+		@include adaptiveValue("font-size", 40, 16, 0, 1600, 479.98);
+		font-style: italic;
+		font-weight: 300;
+	}
+}
+//===============================================================================
+//===============================================================================
+.collections {
+	@include adaptiveValue("padding-top", 75, 30);
+	@include adaptiveValue("padding-bottom", 150, 30);
+	// .collections__container
+	&__container {
+	}
+	// .collections__title
+	&__title {
+	}
+	// .collections__items
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		column-gap: toRem(10);
+		flex-wrap: wrap;
+		@media (max-width: $tablet) {
+			max-width: toRem(634);
+			justify-content: center;
+			margin: 0 auto;
+			column-gap: toRem(5);
+			row-gap: toRem(10);
+		}
+		@media (max-width: $mobileSmall) {
+			max-width: toRem(380);
+			justify-content: center;
+			column-gap: toRem(10);
+			margin: 0 auto;
+		}
+		@media (max-width: em(400)) {
+			margin-right: toRem(-15);
+			margin-left: toRem(-15);
+		}
+	}
+	// .collections__item
+	&__item {
+		margin-right: toRem(-20);
+		margin-left: toRem(-20);
+		@media (max-width: $tablet) {
+			margin: toRem(0);
+		}
+		@media (max-width: $mobileSmall) {
+			margin-right: toRem(-20);
+			margin-left: toRem(-20);
+		}
+	}
+	// .collections__card
+	&__card {
+		text-align: center;
+		max-width: toRem(208);
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
+	}
+	// .collections__image
+	&__image-ibg {
+		width: toRem(208);
+		height: toRem(208);
+		img {
+			max-width: 100%;
+		}
+	}
+	// .collections__name
+	&__name {
+		font-family: "Cormorant";
+		font-size: toRem(24);
+	}
+}
+
 //==================================================================================
 //==================================================================================
 .clients {
@@ -57,7 +154,7 @@
 				display: block;
 			}
 		}
-		&:nth-last-child(-n+2) {
+		&:nth-last-child(-n + 2) {
 			@media (max-width: $mobileSmall) {
 				display: none;
 			}
