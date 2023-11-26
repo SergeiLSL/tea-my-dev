@@ -1,6 +1,9 @@
 //==================================================================================
 //==================================================================================
 .page {
+	// .page__clients
+	&__clients {
+	}
 	// .page__blog
 	&__blog {
 	}
@@ -13,6 +16,68 @@
 }
 //==================================================================================
 //==================================================================================
+.clients {
+	opacity: 0.5;
+	background-color: $lightColor;
+	@include adaptiveValue("padding-top", 60, 30);
+	@include adaptiveValue("padding-bottom", 60, 30);
+	// .clients__container
+	&__container {
+	}
+	// .clients__title
+	&__title {
+	}
+	// .clients__items
+	&__items {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+		gap: toRem(26);
+		@media (max-width: $tablet) {
+			flex-wrap: wrap;
+			max-width: toRem(892);
+		}
+		@media (max-width: toRem(912)) {
+			max-width: toRem(636);
+			gap: toRem(20);
+		}
+	}
+	// .clients__item
+	&__item {
+		flex: 0 1 toRem(280);
+		@media (max-width: $mobile) {
+			min-width: toRem(220);
+			flex: 0 1 toRem(220);
+		}
+		&:last-child {
+			@media (max-width: $tablet) {
+				display: none;
+			}
+			@media (max-width: toRem(912)) {
+				display: block;
+			}
+		}
+		&:nth-last-child(-n+2) {
+			@media (max-width: $mobileSmall) {
+				display: none;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 1 100%;
+		}
+	}
+	// .clients__quote
+	&__quote {
+		font-size: toRem(16);
+		font-style: italic;
+		font-weight: 300;
+	}
+	// .clients__footer
+	&__footer {
+		font-weight: 600;
+		margin-top: toRem(10);
+	}
+}
 
 //==================================================================================
 //==================================================================================
@@ -25,43 +90,42 @@
 	}
 	// .blog__title
 	&__title {
-		text-align: center;
 		@include adaptiveValue("margin-bottom", 60, 30);
 	}
 	// .blog__items
 	&__items {
 		// display: grid;
-		// gap: totoRem(70);
-		// grid-template-columns: repeat(auto-fill, minmax(totoRem(400), 1fr));
+		// gap: toRem(70);
+		// grid-template-columns: repeat(auto-fill, minmax(toRem(400), 1fr));
 		// &:not(:last-child) {
-		// 	margin-bottom: totoRem(60);
+		// 	margin-bottom: toRem(60);
 		// }
 		// @media (max-width: $tablet) {
-		// 	grid-template-columns: repeat(auto-fill, minmax(totoRem(100), totoRem(400)));
-		// 	gap: totoRem(50);
+		// 	grid-template-columns: repeat(auto-fill, minmax(toRem(100), toRem(400)));
+		// 	gap: toRem(50);
 		// }
 		// @media (max-width: $mobile) {
-		// 	row-gap: totoRem(30);
+		// 	row-gap: toRem(30);
 		// }
 		// @media (max-width: $mobileSmall) {
-		// 	grid-template-columns: repeat(auto-fill, minmax(totoRem(220), 1fr));
+		// 	grid-template-columns: repeat(auto-fill, minmax(toRem(220), 1fr));
 		// }
 		display: flex;
 		flex-wrap: wrap;
-		gap: totoRem(40);
-		// column-gap: totoRem(40);
-		// margin: totoRem(0) totoRem(-20);
+		gap: toRem(40);
+		// column-gap: toRem(40);
+		// margin: toRem(0) toRem(-20);
 		justify-content: space-between;
 		justify-content: center;
 		&:not(:last-child) {
-			margin-bottom: totoRem(60);
+			margin-bottom: toRem(60);
 		}
 		@media (max-width: $mobile) {
-			max-width: totoRem(640);
+			max-width: toRem(640);
 			justify-content: start;
 			margin: 0 auto;
 			&:not(:last-child) {
-				margin-bottom: totoRem(30);
+				margin-bottom: toRem(30);
 			}
 			&:nth-child(2) {
 				// justify-content: end;
@@ -71,9 +135,9 @@
 	// .blog__item
 	&__item {
 		flex: 0 1 47%;
-		min-width: totoRem(353);
-		// padding: totoRem(0) totoRem(20);
-		max-width: totoRem(542);
+		min-width: toRem(353);
+		// padding: toRem(0) toRem(20);
+		max-width: toRem(542);
 		// @media (min-width: $mobile) {
 		// 	flex: 0 1 40%;
 		// }
@@ -88,11 +152,11 @@
 	&__view-more {
 		// justify-self: center;
 		// color: $mainColor;
-		// font-size: totoRem(20);
+		// font-size: toRem(20);
 		// font-weight: 300;
 		// border: 1px solid $mainColor;
 		// // background-color: #fff;
-		// padding: totoRem(12) totoRem(41);
+		// padding: toRem(12) toRem(41);
 		// transition: background-color 0.3s;
 		// @media (any-hover: hover) {
 		// 	&:hover {
@@ -111,7 +175,7 @@
 	}
 	// @media (max-width: $mobileSmall) {
 	// 	&:nth-child(even) {
-	// 		margin-left: totoRem(0);
+	// 		margin-left: toRem(0);
 	// 	}
 	// }
 
@@ -119,8 +183,8 @@
 	&__card {
 		display: flex;
 		// aspect-ratio: 33.21%; /* 180/542 */
-		// max-width: totoRem(542);
-		column-gap: totoRem(20);
+		// max-width: toRem(542);
+		column-gap: toRem(20);
 		// @media (max-width: em(360)) {
 		// 	flex-direction: column;
 		// }
@@ -147,13 +211,13 @@
 			}
 		}
 		@media (max-width: em(360)) {
-			margin-bottom: totoRem(10);
+			margin-bottom: toRem(10);
 		}
 	}
 	// .item-blog__content
 	&__content {
 		flex: 0 1 50%;
-		max-width: totoRem(252);
+		max-width: toRem(252);
 		display: flex;
 		flex-direction: column;
 	}
@@ -162,7 +226,7 @@
 		flex: 1 1 auto;
 		// color: $brownColor;
 		&:not(:last-child) {
-			margin-bottom: totoRem(16);
+			margin-bottom: toRem(16);
 		}
 	}
 	// .item-blog__link-title
@@ -180,23 +244,23 @@
 	// .item-blog__text
 	&__text {
 		font-family: "Open Sans";
-		font-size: totoRem(13);
+		font-size: toRem(13);
 		font-weight: 300;
 		&:not(:last-child) {
-			margin-bottom: totoRem(48);
+			margin-bottom: toRem(48);
 		}
 		@media (max-width: em(360)) {
 			&:not(:last-child) {
-				margin-bottom: totoRem(48);
+				margin-bottom: toRem(48);
 			}
 		}
 	}
 	&__read {
 		justify-self: center;
-		max-width: totoRem(43);
+		max-width: toRem(43);
 		color: $mainColor;
 		font-family: "Open Sans";
-		font-size: totoRem(13);
+		font-size: toRem(13);
 		font-weight: 300;
 		background: url("@img/blog/arrow.svg") right no-repeat;
 		transition: background-color 0.3s;
@@ -220,7 +284,7 @@
 	// .subscribe__row
 	&__row {
 		display: flex;
-		// column-gap: totoRem(40);
+		// column-gap: toRem(40);
 		align-items: center;
 		@media (max-width: $tablet) {
 			flex-direction: column;
@@ -238,15 +302,15 @@
 	}
 	// .subscribe__content
 	&__content {
-		padding-right: totoRem(20);
+		padding-right: toRem(20);
 		@media (max-width: $tablet) {
-			padding-right: totoRem(0);
+			padding-right: toRem(0);
 		}
 	}
 	// .subscribe__title
 	&__title {
 		&:not(:last-child) {
-			margin-bottom: totoRem(50);
+			margin-bottom: toRem(50);
 		}
 		@media (max-width: $tablet) {
 			text-align: center;
@@ -261,18 +325,18 @@
 		font-weight: 300;
 		line-height: 150%;
 		@media (max-width: $tablet) {
-			max-width: totoRem(780);
+			max-width: toRem(780);
 		}
 		@media (max-width: $mobile) {
-			max-width: totoRem(640);
+			max-width: toRem(640);
 		}
 	}
 	// .subscribe__body
 	&__body {
-		padding-left: totoRem(20);
+		padding-left: toRem(20);
 		@media (max-width: $tablet) {
-			max-width: totoRem(580);
-			padding-left: totoRem(0);
+			max-width: toRem(580);
+			padding-left: toRem(0);
 		}
 	}
 	// .subscribe__form
@@ -289,10 +353,10 @@
 		.form__error {
 			position: absolute;
 			top: 30%;
-			left: totoRem(-20);
-			font-size: totoRem(13);
+			left: toRem(-20);
+			font-size: toRem(13);
 			color: red;
-			margin-top: totoRem(5);
+			margin-top: toRem(5);
 		}
 	}
 	// .form__input
@@ -309,13 +373,13 @@
 	}
 	// .form__checkbox
 	&__checkbox {
-		margin-top: totoRem(12);
+		margin-top: toRem(12);
 	}
 }
 
 .checkbox {
 	&._error .checkbox__label::before {
-		box-shadow: totoRem(0) totoRem(0) totoRem(15) red;
+		box-shadow: toRem(0) toRem(0) toRem(15) red;
 	}
 	// .checkbox__input
 	&__input {
@@ -326,7 +390,7 @@
 	}
 	// .checkbox__label
 	&__label {
-		font-size: totoRem(13);
+		font-size: toRem(13);
 		line-height: 140%;
 		font-weight: 300;
 		display: inline-flex;
@@ -336,20 +400,20 @@
 		&:before {
 			content: "";
 			align-self: flex-start;
-			flex: 0 0 totoRem(14);
-			height: totoRem(14);
+			flex: 0 0 toRem(14);
+			height: toRem(14);
 			background-color: #fff;
-			border: totoRem(1) solid $brownColor;
-			margin: totoRem(0) totoRem(10) totoRem(0) totoRem(0);
+			border: toRem(1) solid $brownColor;
+			margin: toRem(0) toRem(10) toRem(0) toRem(0);
 		}
 		&::after {
 			transition: transform 0.5s ease 0s;
 			content: "";
-			width: totoRem(8);
-			height: totoRem(8);
+			width: toRem(8);
+			height: toRem(8);
 			position: absolute;
-			top: totoRem(3);
-			left: totoRem(3);
+			top: toRem(3);
+			left: toRem(3);
 			background-color: $brownColor;
 			transform: scale(0);
 		}
